@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/" />
+    <title>Test page for Link Ownership</title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <script src="/main.js"></script>
+
+    {{#if title}}
+      <meta property="fg:pages" content="{{{join pages}}}" />
+      <meta property="og:title" content="{{{title}}}" />
+      <meta property="og:description" content="{{{description}}}" />
+      <meta property="og:picture" content="{{{picture}}}" />
+    {{/if}}
+</head>
+<body>
+  {{{body}}}
+  {{#if picture}}
+  <img src="{{{picture}}}" alt="">
+  {{/if}}
+</body>
+</html>
