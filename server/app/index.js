@@ -24,20 +24,9 @@ module.exports = function () {
     app.get('/', function (req, res) {
         res.render('home');
     }); 
-    app.use('/articles',require('./routes'));
-    app.use(function (req, res, next) {
-        var err;
-        if (path.extname(req.path).length > 0) {
-            err = new Error('Not found.');
-            err.status = 404;
-            next(err);
-        } else {
-            next();
-        }
-    });
-
+    app.use('/articles',require('./routes')); 
     app.get('/*', function (req, res) {
-        res.sendFile(app.get('filePath404'));
+        res.render('404');
     }); 
     app.use(function (err, req, res, next) {
         console.error(err);
