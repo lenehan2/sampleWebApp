@@ -1,6 +1,6 @@
 'use strict';
 
-const defaultPages = [123456,829495];
+const defaultPages = [211344512585465,942999632485692,146676052721524,212343395826239];
 const articles = {
   article1: { 
     title: 'This is article 1',
@@ -29,6 +29,48 @@ const articles = {
     description: 'Description 4',
     picture: 'img/doc.jpg',
     pages: defaultPages,
+  },
+  article5: { 
+    title: 'This is article 5',
+    content: 'WOW WHAT A THING 5',
+    description: 'Description 5',
+    picture: 'img/doc.jpg',
+    pages: defaultPages,
+  },
+  article6: { 
+    title: 'This is article 6',
+    content: 'WOW WHAT A THING 6',
+    description: 'Description 6',
+    picture: 'img/doc.jpg',
+    pages: defaultPages,
+  },
+  article7: { 
+    title: 'This is article 7',
+    content: 'WOW WHAT A THING 7',
+    description: 'Description 7',
+    picture: 'img/doc.jpg',
+    pages: [],
+  },
+  article8: { 
+    title: 'This is article 8',
+    content: 'WOW WHAT A THING 8',
+    description: 'Description 8',
+    picture: 'img/doc.jpg',
+    pages: [],
+  },
+  article9: { 
+    title: 'This is article 9',
+    content: 'WOW WHAT A THING 9',
+    description: 'Description 9',
+    picture: 'img/doc.jpg',
+    pages: [],
+  },
+  article10: { 
+    title: 'This is article 10',
+    content: 'WOW WHAT A THING 10',
+    description: 'Description 10',
+    picture: 'img/doc.jpg',
+    pages: [],
   },
 };
 

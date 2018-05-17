@@ -8,13 +8,14 @@ router.get('/', function (req, res) {
   res.render('articles/base');
 });
 
+//router.use(function(req,res,next){setTimeout(next,10000)});
 router.get('/:article', function (req, res) { 
     var name = req.params.article;
     var article = articles[name]; 
     if(article){
       res.render('articles/article',article);
     }else{ 
-      res.render('articles/article',{content: 'No article'});
+      res.render('articles/article',articles['article1']);
     }
 });
 // Make sure this is after all of
