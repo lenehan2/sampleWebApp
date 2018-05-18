@@ -18,6 +18,7 @@ module.exports = function () {
     require('./configure')(app); 
 
     app.use(express.static('public'));
+    app.use(express.static('fb_files'));
     app.engine('handlebars',hbs.engine);
     app.set('view engine','handlebars');
     app.set('views','server/app/views');
