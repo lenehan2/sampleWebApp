@@ -25,7 +25,8 @@ module.exports = function () {
     app.get('/', function (req, res) {
         res.render('home');
     }); 
-    app.use('/articles',require('./routes')); 
+    app.use('/articles',require('./routes/articles')); 
+    app.use('/fb_tags',require('./routes/fb_tags')); 
     app.get('/*', function (req, res) {
         res.render('404');
     }); 

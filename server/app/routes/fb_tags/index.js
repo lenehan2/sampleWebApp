@@ -1,7 +1,7 @@
 'use strict';
 const router = require('express').Router(); // eslint-disable-line new-cap
 const path = require('path');
-const articles = require('../../static/articles.js');
+const articles = require('../../../static/articles.js');
 module.exports = router;
 
 router.get('/', function (req, res) { 
@@ -11,12 +11,12 @@ router.get('/', function (req, res) {
 //router.use(function(req,res,next){setTimeout(next,10000)});
 router.get('/:article', function (req, res) { 
     var name = req.params.article;
-    var article = articles[name]; 
-    if(article){
-      res.render('articles/article',article);
-    }else{ 
-      res.render('articles/article',articles['article1']);
-    }
+    var article = articles[name] || articles.article1; 
+
+    var articleCopy = JSON.parse(JSON.stringify(article));
+    articleCopy.layout = 'fbtags';
+    articleCopy.articleId = name;
+    res.render('articles/article',articleCopy);
 });
 // Make sure this is after all of
 // the registered routes!
