@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/" />
+    <title>Test page for Link Ownership</title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+
+      <meta property="fb:page_id" content="1259828690717893" />
+      <meta property="fb:app_id" content="416582828358758" />
+      <meta property="so:status" content="5,1" />
+      <meta property="og:url" content="http://www.johnml.me/fb_tags/{{{articleId}}}" /> 
+      <meta property="og:type" content="article" /> 
+    {{#if title}}
+      <meta property="og:title" content="{{{title}}}" />
+      <meta property="og:description" content="{{{description}}}" />
+      <meta property="og:image" content="http://www.johnml.me/{{{picture}}}" />
+    {{/if}}
+</head>
+<body>
+  {{{body}}}
+  <h2>Testing FB OG tags</h2>
+  {{#if picture}}
+  <img src="{{{picture}}}" alt="">
+  {{/if}}
+  <img src="img/puppie1.jpg" alt="">
+  <img src="img/puppie2.jpg" alt="">
+  <img src="img/puppie3.jpg" alt="">
+  <img src="img/puppie4.jpg" alt="">
+  <img src="img/puppie_cute.jpg" alt="">
+</body>
+</html>

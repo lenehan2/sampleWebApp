@@ -27,6 +27,7 @@ module.exports = function () {
     }); 
     app.use('/articles',require('./routes/articles')); 
     app.use('/fb_tags',require('./routes/fb_tags')); 
+    app.use('/delay',require('./routes/tags_delayed')); 
     app.get('/*', function (req, res) {
         res.render('404');
     }); 
