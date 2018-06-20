@@ -72,6 +72,13 @@ const articles = {
     picture: 'img/doc.jpg',
     pages: [],
   },
+  broken_link: { 
+    title: 'First image should be broken here',
+    content: 'Broken Link',
+    description: 'Broken link',
+    picture: 'img/broken_link.jpg',
+    pages: [],
+  },
 };
 
 
