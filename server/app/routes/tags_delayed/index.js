@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
 
 //router.use(function(req,res,next){setTimeout(next,10000)});
 router.get('/:article', function (req, res) { 
-    var name = req.params.article;
+    var name = req.sanitize(req.params.article);
     var article = articles[name] || articles.article1; 
 
     var articleCopy = JSON.parse(JSON.stringify(article));
