@@ -12,10 +12,16 @@ router.get('/', function (req, res) {
 router.get('/:article', function (req, res) { 
     var name = req.params.article;
     var article = articles[name] || articles.article1; 
-
+    var { title, description } = req.query;
     var articleCopy = JSON.parse(JSON.stringify(article));
     articleCopy.layout = 'fbtags';
     articleCopy.articleId = name;
+    if(title){ 
+        articleCopy.title = title;
+    };
+    if(description){
+        articleCopy.description = description;
+    };
     res.render('articles/article',articleCopy);
 });
 // Make sure this is after all of
