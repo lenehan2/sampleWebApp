@@ -4,7 +4,8 @@
   "description": "Test website to test link editing",
   "main": "server/start.js",
   "scripts": {
-    "startserver": "node_modules/pm2/bin/pm2 start server/startsrv.js"
+    "startserver": "node_modules/pm2/bin/pm2 start server/startsrv.js",
+    "start": "node server/startsrv.js"
   },
   "engines": {
     "node": ">=4.0.0"

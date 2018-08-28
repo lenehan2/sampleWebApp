@@ -79,6 +79,13 @@ const articles = {
     picture: 'img/broken_link.jpg',
     pages: [],
   },
+  long_title: { 
+    title: 'Billie Jean King and Angelique Kerber Talk U.S. Open, Breaking Barriers and Keeping Girls in Sports.',
+    content: 'Long title', 
+    description: 'Description long title',
+    picture: 'img/doc.jpg',
+    pages: [],
+  },
 };
 
 
