@@ -18,7 +18,7 @@ router.get('/:article', function (req, res) {
     articleCopy.articleId = name;
     setTimeout(function(){
         res.render('articles/article',articleCopy);
-    },2000);
+    },8000);
 });
 // Make sure this is after all of
 // the registered routes!
