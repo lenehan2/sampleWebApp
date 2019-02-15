@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/" />
+    <title>Test page for Link Ownership</title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+
+    <link rel="amphtml" href="{{{full_url}}}/amplink">
+      <meta name="pages" content="93810620818" />
+    {{#if title}}
+      <meta property="og:title" content="{{{title}}}" />
+      <meta property="og:description" content="{{{description}}}" />
+      <meta property="og:image" content="http://www.johnml.me/{{{picture}}}" />
+      <style type="text/css">
+        img {max-width: 400px; max-height:400px}
+      </style>
+    {{/if}}
+</head>
+<body>
+  <h2>Amp test</h2>
+  {{#if isAmp}}
+  <h2>This is an amp link: {{{full_url}}}</h2>
+  {{else}}
+  <a href="{{{full_url}}}amplink">CLICK ME TO GO TO AMP LINK</a>
+  {{/if}}
+  {{{body}}}
+  <h2>Main Layout</h2>
+  {{#if picture}}
+  <img src="{{{picture}}}" alt="">
+  {{/if}}
+  <img src="img/puppie1.jpg" alt="">
+  <img src="img/puppie2.jpg" alt="">
+  <img src="img/puppie3.jpg" alt="">
+  <img src="img/puppie4.jpg" alt="">
+  <img src="img/puppie_cute.jpg" alt="">
+  <img src="img/5mbimage.jpg" alt="">
+  <img src="img/kathrinamademesavethis.png" alt="">
+  <img src="img/flower.jpg" alt=""> 
+  <img src="img/bow.jpeg" alt="">
+  <img src="img/largeimage.jpg" alt="">
+  <img src="img/logo.png" alt="">
+  <img src="img/shutterstock.jpg" alt=""> 
+
+</body>
+</html>
