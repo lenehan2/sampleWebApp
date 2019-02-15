@@ -12,7 +12,8 @@ router.get('/', function (req, res) {
 router.get('/:article', function (req, res) { 
     var name = req.sanitize(req.params.article);
     let url = req.protocol + '://'+req.get('host') + req.originalUrl;
-    console.log("FULL URL: "+req.protocol + '://'+req.get('host') + req.originalUrl)
+    if(url[url.length-1] !=='/') url+='/';
+    console.log("FULL URL: "+url)
     res.render('articles/article',{...articles['article1'],article_name: name, full_url: url,layout: 'amp'});
 });
 router.get('/:article/amplink', function (req, res) { 
