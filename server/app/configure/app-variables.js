@@ -11,7 +11,7 @@ var env = require(path.join(rootPath, './server/env'));
 
 var logMiddleware = function (req, res, next) {
     util.log(('---NEW REQUEST---'));
-    let  ip = (req.headers['x-forwarded-for'] || '').split(',').pop() || 
+    let  ip = (req.headers['x-forwarded-for'] || '').split(',')[0] || 
         req.connection.remoteAddress || 
         req.socket.remoteAddress || 
         req.connection.socket.remoteAddress;
