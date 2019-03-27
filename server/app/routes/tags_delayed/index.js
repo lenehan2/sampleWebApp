@@ -20,6 +20,20 @@ router.get('/:article', function (req, res) {
         res.render('articles/article',articleCopy);
     },8000);
 });
+router.get('/:article/:delay', function (req, res) { 
+    var name = req.sanitize(req.params.article);
+    var delayTimeSeconds = Number(req.sanitize(req.params.delay)) || 1;
+
+    var article = articles[name] || articles.article1; 
+
+
+    var articleCopy = JSON.parse(JSON.stringify(article));
+    articleCopy.layout = 'tagsdelay';
+    articleCopy.articleId = name;
+    setTimeout(function(){
+        res.render('articles/article',articleCopy);
+    },delayTimeSeconds*1000);
+});
 // Make sure this is after all of
 // the registered routes!
 router.use(function (req, res, next) {
