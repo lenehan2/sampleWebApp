@@ -31,6 +31,7 @@ module.exports = function () {
     app.use('/deeplinking',require('./routes/deeplinking')); 
     app.use('/amp',require('./routes/amp')); 
     app.use('/delay',require('./routes/tags_delayed')); 
+    app.use('/dps_test',require('./routes/dps_test')); 
     app.get('/*', function (req, res) {
         res.render('404');
     }); 
