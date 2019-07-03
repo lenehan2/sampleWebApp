@@ -20,6 +20,7 @@ var logMiddleware = function (req, res, next) {
     console.log(util.format(chalk.cyan('%s: %s'), 'BODY    ', util.inspect(req.body)));
     console.log(util.format(chalk.blue('%s: %s'), 'UA    ', util.inspect(req.useragent.source)));
     console.log(util.format(chalk.magenta('%s: %s'), 'IP    ', ip));
+    console.log(util.format(chalk.green('%s: %s'), 'Cookie    ', req.headers.cookie));
     next();
 };
 
